@@ -1,2 +1,5 @@
 # ignore visual studio code folder
 .vscode
+
+# ignore binary folder
+bin/

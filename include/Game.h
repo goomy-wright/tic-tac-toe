@@ -17,11 +17,11 @@ private:
     std::vector<char> borders{
         '-', '|', '+'
     };
-
 public:
-    void
-        print(),
-        setValue(const char row, const std::string value, const int num);
+    bool outOfFields = false;
+
+    void print();
+    bool setValue(const char row, const std::string value, const int num);
     
     std::string checkWin();
 };
@@ -33,7 +33,10 @@ private:
         playerX,
         playerO;
 
-    bool playerOTurn = false;
+    bool
+        playerOTurn = false,
+        testSetValue = true;
+
     char charInput;
     int intInput;
 
