@@ -13,8 +13,10 @@ int main(int argc, const char *argv[])
 }
 ```
 
-## Compile and run the project (only on linux)
-`make && bin/app`
+## Build and run the project (only on linux)
+```bash
+$ make && bin/app
+```
 
 ## How to Play
 * Input (1-9) - Field Number
