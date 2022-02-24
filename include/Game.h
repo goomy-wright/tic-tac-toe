@@ -7,28 +7,23 @@
 class Table
 {
 private:
-    std::string none = " ";
-    std::vector<std::vector<std::string>> fields{
-        {none, none, none},
-        {none, none, none},
-        {none, none, none},
-    };
+    char none = ' ';
+    std::vector<char>
+        borders{'-', '|', '+'},
+        fields{none, none, none, none, none, none, none, none, none};
 
-    std::vector<char> borders{
-        '-', '|', '+'
-    };
 public:
-    bool outOfFields = false;
+    bool
+        setValue(const char value, const int num),
+        outOfFields = false;
 
     void print();
-    bool setValue(const char row, const std::string value, const int num);
-    
-    std::string checkWin();
+    char checkWin();
 };
 
 class TicTacToe
 {
-private:
+public:
     std::string
         playerX,
         playerO;
@@ -37,16 +32,11 @@ private:
         playerOTurn = false,
         testSetValue = true;
 
-    char charInput;
-    int intInput;
-
+    int fieldInput;
     Table t;
-public:
-    TicTacToe(const std::string playerOne, const std::string playerTwo);
-    ~TicTacToe() { delete this; };
 
-    void
-        start();
+    TicTacToe();
+    void start();
 };
 
 #endif // GAME_H

@@ -1,9 +1,13 @@
-COMPILER=g++
-MAIN_FILE=src/main.cpp
-BUILD_PATH=bin/app
+CC := g++
 
-.SILENT:
-all: build
+SOURCES += $(wildcard *.cpp)
+SOURCES += $(wildcard */*.cpp)
 
-build:
-	$(COMPILER) $(MAIN_FILE) -o $(BUILD_PATH)
+CFLAGS := -g -Wall -w -I./include
+EXEC := ./bin/app
+
+$(EXEC): $(SOURCES)
+	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -rf $(EXEC)

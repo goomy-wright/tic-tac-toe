@@ -1,20 +1,20 @@
 # Tic Tac Toe Mini Console Game in C++
 ## Include Library
 ```cpp
-#include "path/to/include/Game.cpp"
+#include "path/to/include/Game.h"
 ```
 
 ## Start the Game
 ```cpp
-int main(int argc, const char *argv[]) {
-    TicTacToe game("Player One", "Player Two");
+int main(int argc, const char *argv[])
+{
+    TicTacToe game;
     game.start();
 }
 ```
 
 ## How to Play
-* First input (a, b, c) - row
-* Second input (1, 2, 3) - number of field
+* Input (1-9) - Field Number
 
 ## Examples
 ```
@@ -23,14 +23,14 @@ int main(int argc, const char *argv[]) {
  | | 
 -+-+-
  | | 
-Player One [x]: a 1
+Player One [x]: 1
 
 x| | 
 -+-+-
  | | 
 -+-+-
  | | 
-Player Two [o]: c 3
+Player Two [o]: 9
 
 x| | 
 -+-+-
